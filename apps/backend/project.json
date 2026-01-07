@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "projectType": "application",
+  "sourceRoot": "apps/backend",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend",
+        "command": "source .venv/bin/activate && python manage.py runserver 8000"
+      }
+    },
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend",
+        "command": "source .venv/bin/activate && python manage.py migrate"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend",
+        "command": "source .venv/bin/activate && python manage.py test"
+      }
+    }
+  }
+}

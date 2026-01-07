@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "parallel": true,
+        "commands": [
+          "nx serve frontend",
+          "nx serve backend"
+        ]
+      }
+    }
+  }
+}
