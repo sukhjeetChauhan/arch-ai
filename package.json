@@ -1,14 +1,11 @@
 {
   "name": "arch-ai",
   "version": "0.0.1",
-
-
   "scripts": {
     "dev": "nx run root:dev",
     "dev:frontend": "nx serve frontend",
     "dev:backend": "nx serve backend"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@nx/devkit": "22.3.3",
@@ -34,6 +31,7 @@
     "@vitest/coverage-v8": "^4.0.0",
     "@vitest/ui": "^4.0.0",
     "autoprefixer": "10.4.13",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "2.31.0",

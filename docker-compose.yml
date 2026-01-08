@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    container_name: archai-db
+    environment:
+      POSTGRES_DB: archai
+      POSTGRES_USER: archai
+      POSTGRES_PASSWORD: archai
+    ports:
+      - "5432:5432"
+    volumes:
+      - archai_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U archai -d archai"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+
+volumes:
+  archai_pgdata:
